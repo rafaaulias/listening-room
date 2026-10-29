@@ -1,0 +1,101 @@
+.page {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  touch-action: none;
+}
+
+.hud {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+  padding: 0.9rem 1.25rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.hint {
+  margin: 0;
+}
+
+.keys {
+  margin: 0;
+  color: #9a9a9a;
+}
+
+.message {
+  margin: 0;
+}
+
+.note {
+  margin: 0;
+  color: #9a9a9a;
+}
+
+.live {
+  margin: 0;
+  color: #9a9a9a;
+}
+
+.pad {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.padButton {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.padButton:hover {
+  border-color: var(--ink);
+}
+
+.padButton:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.fallback {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 560px) {
+  .hud {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .keys {
+    display: none;
+  }
+
+  .pad {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+}
